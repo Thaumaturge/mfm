@@ -3,5 +3,6 @@ image: phusion/baseimage
 all_tests:
   script:
    - sh ./sh_scripts/install.sh
-   - python3 manage.py test -k
+   - sh cd mfm
+   - uwsgi --ini mfm_uwsgi.ini
   when: on_success
